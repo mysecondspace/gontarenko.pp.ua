@@ -1,0 +1,153 @@
+article {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 100%;
+
+  > div {
+    width: 100%;
+
+    @include landscape {
+      margin: $padding * 3 0;
+    }
+
+    // heading
+    .heading {
+      position: relative;
+      padding: 0 5vw 7.5vh;
+
+      @include media(phone) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      > span {
+        text-transform: uppercase;
+        font-family: $xbold;
+        font-size: em(60);
+        display: block;
+        color: $white;
+
+        @include media(phone) {
+          font-size: em(30);
+        }
+
+        &:nth-of-type(1) {
+          animation: fade-in-left $time * 1.5 forwards;
+        }
+
+        &:nth-of-type(2) {
+          animation: fade-in-right $time * 1.5 forwards;
+        }
+      }
+    }
+
+    // slogan
+    .slogan {
+      animation: fade-in $time * 1.5 calc(var(--delay) / 2) forwards;
+      font-family: $light;
+      position: relative;
+      font-size: em(24);
+      color: $white;
+      opacity: 0;
+
+      @include media(phone) {
+        font-size: em(18);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        background: $white;
+        margin: 0 auto;
+        opacity: .25;
+        height: 1px;
+        width: 75px;
+        top: -5vh;
+        right: 0;
+        left: 0;
+      }
+    }
+
+    // buttons
+    .buttons {
+      animation: fade-in-up $time * 1.5 calc(var(--delay) / 1.5) forwards;
+      margin-top: 15vh;
+      opacity: 0;
+
+      @include media(phone) {
+        margin-top: 10vh;
+      }
+
+      .glitch-button {
+        margin-right: 1.75vw;
+
+        @include media(phone) {
+          margin-right: 2.75vw;
+        }
+      }
+
+      .glitch-link {
+        margin-left: 1.75vw;
+
+        @include media(phone) {
+          margin-left: 2.75vw;
+        }
+      }
+    }
+
+    // information about me
+    .info {
+      z-index: 1;
+      opacity: 0;
+      color: $white;
+      text-align: left;
+      position: relative;
+      animation: fade-in-right $time var(--delay) forwards;
+
+      @include landscape {
+        margin-left: auto;
+        width: 47%;
+      }
+
+      p {
+        @include media(phone) {
+          font-size: em(16);
+        }
+
+        @include media(smallest) {
+          font-size: em(14);
+        }
+
+        @include media(tablet) {
+          font-size: em(18);
+        }
+
+        @include landscape {
+          &:first-of-type {
+            width: 72.5%;
+          }
+        }
+      }
+
+      ul {
+        margin-left: 16px;
+
+        li {
+          font-size: em(14);
+          line-height: 1.48;
+          font-family: $light;
+          list-style-type: disc;
+
+          @include media(phone) {
+            font-size: em(12);
+          }
+
+          @include media(smallest) {
+            font-size: em(10);
+          }
+        }
+      }
+    }
+  }
+}

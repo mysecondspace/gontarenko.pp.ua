@@ -1,0 +1,15 @@
+<!-- form -->
+<div class="form">
+  <div>
+    <img src="images/close.svg" alt="close the form" title="close the form icon">
+    <form action="mail.php" method="get">
+      <input type='text' name='name' value="who are you?" onblur='if (this.value == "") this.value = "who are you?"' onfocus='if (this.value == "who are you?") this.value = ""'>
+      <input type='text' name='email' value="your e-mail" onblur='if (this.value == "") this.value = "your e-mail"' onfocus='if (this.value == "your e-mail") this.value = ""'>
+      <textarea name="message" rows="1" onblur='if (this.value == "") { this.value = "what would you like?" }' onfocus='if (this.value == "what would you like?") { this.value = "" }'>what would you like?</textarea>
+      <button class="glitch-link" type="submit" value="submit">say hello!</button>
+    </form>
+    <p>
+      <span>ESC</span> &mdash; close the form or click <a href="javascript:close()">here</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,381 @@
+// noise effect
+.noise {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  pointer-events: none;
+
+  @include media(phone) {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    opacity: .35;
+    content: '';
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    pointer-events: none;
+    will-change: transform;
+    background: url('../images/noise.png');
+    animation: grain 2s steps(10) infinite;
+  }
+}
+
+// background with glitch effect
+.background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: .015;
+  position: absolute;
+  background: url(../images/glitch-transition.gif) center;
+  background-size: cover;
+}
+
+// linear gradient
+.gradient {
+  @include background(linear-gradient(right, $shaded-spruce, $shaded-spruce-1, $shaded-spruce-2, transparent, transparent));
+  animation: fade-in-right $time var(--delay) forwards;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  right: 0;
+  top: 0;
+}
+
+// page preloader
+.preloader {
+  top: 0;
+  left: 0;
+  z-index: 999;
+  position: fixed;
+
+  &__transition {
+    background: url(../images/glitch-transition.gif) center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    opacity: .1;
+  }
+
+  &__background {
+    background-color: $shaded-spruce;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+  }
+}
+
+// constellation
+.constellation {
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+}
+
+// letter with rotate effect
+.rotate {
+  span {
+    @include inline-block;
+    transition-timing-function: cubic-bezier(.2, 1, .3, 1);
+    transform: perspective(1000px) rotate3d(0, 1, 0, 0deg);
+    transition: transform .5s, color .5s;
+    vertical-align: initial;
+    position: relative;
+    color: $white;
+  }
+
+  &:hover span {
+    transform: perspective(1000px) rotate3d(0, 1, 0, 180deg);
+  }
+}
+
+// feedback form
+.form {
+  overflow-x: hidden;
+  position: absolute;
+  overflow-y: auto;
+  display: none;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  > div {
+    -webkit-overflow-scrolling: touch;
+    align-items: center;
+    overflow-y: scroll;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  img {
+    position: absolute;
+    cursor: pointer;
+    right: $padding;
+    top: $padding;
+    width: 20px;
+  }
+
+  p {
+    font-size: em(12);
+    position: absolute;
+    bottom: $padding;
+    left: $padding;
+    color: $white;
+    display: none;
+
+    @include media(laptop) {
+      display: block;
+    }
+
+    span {
+      font-family: $bold;
+    }
+
+    a {
+      color: $white;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  form {
+    margin: 0 auto;
+    text-align: center;
+
+    @include media(phone) {
+      width: calc(100% - #{$padding} * 2);
+    }
+
+    @include landscape {
+      width: calc(75% - #{$padding} * 2);
+    }
+
+    input,
+    button,
+    textarea {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      color: $white;
+      outline: none;
+      border-radius: 0;
+      font-size: em(30);
+      background: transparent;
+      border-bottom: 1px solid;
+
+      @include media(phone) {
+        font-size: em(20);
+      }
+    }
+
+    input {
+      margin-bottom: 7.5vh;
+      font-family: $light;
+    }
+
+    button {
+      width: fit-content;
+      margin-top: 7.5vh;
+      cursor: pointer;
+    }
+
+    textarea {
+      font-family: $light;
+      padding-top: 22.5vh;
+      overflow: hidden;
+      resize: none;
+    }
+  }
+}
+
+// button with glitch effect
+.glitch-button {
+  @extend %glitch;
+  @include inline-block;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    bottom: 0;
+    top: 0;
+  }
+
+  &:hover {
+    &::before {
+      animation: glitchy .3s ease .3s infinite;
+    }
+
+    &::after {
+      animation: glitchy .3s ease infinite reverse;
+    }
+  }
+
+  &__inner {
+    display: block;
+    font-family: $bold;
+    padding: 11px 15px;
+    background-color: $white;
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+    color: $shaded-spruce;
+    line-height: 1.1;
+    height: em(10.5);
+
+    &:hover {
+      animation: glitchy .3s ease 1;
+    }
+  }
+}
+
+// link with glitch effect
+.glitch-link {
+  @extend %glitch;
+  @include inline-block;
+  border-bottom: 1px solid $glitch-link;
+  text-transform: uppercase;
+  letter-spacing: $spacing;
+  padding-bottom: 5px;
+  font-family: $bold;
+  position: relative;
+  color: $white;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    height: 1px;
+    bottom: -1px;
+    visibility: hidden;
+  }
+
+  &:hover {
+    &::before {
+      visibility: visible;
+      animation: line-glitchy .3s ease .3s infinite;
+    }
+
+    &::after {
+      visibility: visible;
+      animation: line-glitchy .3s ease infinite reverse;
+    }
+  }
+}
+
+// glitch effect
+%glitch,
+.glitch {
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    left: 0;
+  }
+
+  &::before {
+    background-color: $cyan;
+    z-index: -1;
+  }
+
+  &::after {
+    background-color: $pink;
+    z-index: -2;
+  }
+}
+
+// content with glitch effect
+%glitch-content,
+.glitch-content {
+  --gap-horizontal: 10px;
+  --glitch-height: 100vh;
+  --glitch-width: 100vw;
+  --gap-vertical: 5px;
+  --delay-anim: 3.5s;
+  --time-anim: 4s;
+  --blend-mode-1: none;
+  --blend-mode-2: none;
+  --blend-mode-3: none;
+  --blend-mode-4: none;
+  --blend-color-1: transparent;
+  --blend-color-2: transparent;
+  --blend-color-3: transparent;
+  --blend-color-4: transparent;
+
+  &__text {
+    animation-name: glitch-animation-text;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: var(--time-anim);
+    animation-delay: calc(var(--delay-anim) + var(--time-anim) * .2);
+
+    &--delay {
+      animation-delay: calc(var(--delay-anim) + var(--time-anim) * .23);
+    }
+  }
+
+  &__img {
+    background-color: var(--blend-color-1);
+    background-blend-mode: var(--blend-mode-1);
+    background: radial-gradient($glitch-img-1, $glitch-img-2, $glitch-img-3), url('../images/me.jpg') no-repeat 50% 0;
+    width: calc(100% + var(--gap-horizontal) * 2);
+    height: calc(100% + var(--gap-vertical) * 2);
+    left: calc(-1 * var(--gap-horizontal));
+    top: calc(-1 * var(--gap-vertical));
+    transform: translate3d(0, 0, 0);
+    background-size: cover;
+    position: absolute;
+
+    @include media(phone) {
+      background-position: 40%;
+    }
+
+    &:nth-child(n + 2) {
+      animation-duration: var(--time-anim);
+      animation-delay: var(--delay-anim);
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      opacity: 0;
+    }
+
+    &:nth-child(2) {
+      background-blend-mode: var(--blend-mode-2);
+      background-color: var(--blend-color-2);
+      animation-name: glitch-animation-1;
+    }
+
+    &:nth-child(3) {
+      background-blend-mode: var(--blend-mode-3);
+      background-color: var(--blend-color-3);
+      animation-name: glitch-animation-2;
+    }
+
+    &:nth-child(4) {
+      background-blend-mode: var(--blend-mode-4);
+      background-color: var(--blend-color-4);
+      animation-name: glitch-animation-3;
+    }
+  }
+}

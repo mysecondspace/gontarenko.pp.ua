@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home — Gontarenko</title>
+    <meta name="description" content="web soulutions with a soul ✓ make the web great again ➤ Gontarenko">
+    //= templates/head.html
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <!-- background with glitch effect -->
+      <div class="background"></div>
+
+      <!-- constellation canvas -->
+      <div class="constellation">
+        <canvas class="constellation__canvas"></canvas>
+      </div>
+
+      <!-- header -->
+      //= templates/header.html
+
+      <!-- article -->
+      <article>
+        <div>
+
+          <!-- heading -->
+          <p class="heading glitch-content">
+            <span>
+
+              <!-- content with glitch effect -->
+              <span class="glitch-content__text">web solutions</span>
+            </span>
+            <span>
+
+              <!-- content with glitch effect -->
+              <span class="glitch-content__text glitch-content__text--delay">with a soul</span>
+            </span>
+          </p>
+
+          <!-- slogan -->
+          <h1 class="slogan">make the web great again</h1>
+
+          <!-- buttons -->
+          <div class="buttons">
+
+            <!-- button with glitch effect -->
+            <a href="data/cv.pdf" target="_blank" rel="nofollow noopener" class="glitch-button">
+              <span class="glitch-button__inner">get my cv</span>
+            </a>
+
+            <!-- link with glitch effect -->
+            <a href="about-me.html" class="glitch-link">about me</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- footer -->
+      //= templates/footer.html
+    </div>
+
+    <!-- backyard elements -->
+    //= templates/elements.html
+
+    <!-- feedback form -->
+    //= templates/form.html
+
+    <!-- script -->
+    <script src="scripts/main.min.js" async></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+// global variables
+$browser-context: 14;
+$spacing: .075em;
+$padding: 3vh;
+$time: 2s;
+
+:root {
+  --delay: 3s;
+}
+
+// glitch
+$cyan: #0ff;
+$pink: #f0f;
+
+// colors
+$white: #fff;
+$black: #000;
+$highlight: rgba(0, 0, 0, 0);
+$box-shadow: 0 0 40px rgba(0, 0, 0, .20);
+
+// main color
+$shaded-spruce: #005960;
+$shaded-spruce-1: rgba(0, 89, 96, .50);
+$shaded-spruce-2: rgba(0, 89, 96, .25);
+
+// glitch
+$glitch-link: rgba(255, 255, 255, .25);
+$glitch-img-1: rgba(0, 89, 96, .50);
+$glitch-img-2: rgba(0, 89, 96, .75);
+$glitch-img-3: rgba(0, 89, 96, 1);
+
+// media queries
+$phone: 768px;
+$tablet: 1024px;
+$laptop: 1440px;
+$desktop: 1920px;
+$smallest: 320px;
+$container: 100%;
+
+// fonts
+$semibold: 'glober semibold';
+$regular: 'glober regular';
+$light: 'glober light';
+$xbold: 'glober xbold';
+$bold: 'glober bold';
