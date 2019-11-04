@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about-me.html",
-    "revision": "05835bd8ce3d4ec3506dc7d22b651439"
+    "revision": "8d10ce3eb384828e9c7d8599f4802edc"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -131,11 +131,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "c0c0ca81b88cba36f2346a548d552d44"
+    "revision": "96518f94632b44a7752f2536d44bacb7"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "387e9a31aa4b76b50413525cae8f16ac"
+    "revision": "b6cd2ebc012bcaecbc6818946155bb9f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

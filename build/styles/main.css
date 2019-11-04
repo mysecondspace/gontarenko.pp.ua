@@ -878,27 +878,29 @@ article > div .info {
 @media only screen and (orientation: landscape) {
   article > div .info {
     margin-left: auto;
-    width: 47%;
+    width: 48%;
   }
 }
+article > div .info h1 {
+  font-weight: normal;
+  font-family: "glober semibold";
+}
 @media only screen and (max-width: 767px) {
-  article > div .info p {
+  article > div .info p,
+  article > div .info h1 {
     font-size: 1.14286em;
   }
 }
 @media only screen and (width: 320px) {
-  article > div .info p {
+  article > div .info p,
+  article > div .info h1 {
     font-size: 1em;
   }
 }
 @media only screen and (min-width: 768px) {
-  article > div .info p {
+  article > div .info p,
+  article > div .info h1 {
     font-size: 1.28571em;
-  }
-}
-@media only screen and (orientation: landscape) {
-  article > div .info p:first-of-type {
-    width: 72.5%;
   }
 }
 article > div .info ul {

@@ -107,10 +107,16 @@ article {
 
       @include landscape {
         margin-left: auto;
-        width: 47%;
+        width: 48%;
       }
 
-      p {
+      h1 {
+        font-weight: normal;
+        font-family: $semibold;
+      }
+
+      p,
+      h1 {
         @include media(phone) {
           font-size: em(16);
         }
@@ -121,12 +127,6 @@ article {
 
         @include media(tablet) {
           font-size: em(18);
-        }
-
-        @include landscape {
-          &:first-of-type {
-            width: 72.5%;
-          }
         }
       }
 
