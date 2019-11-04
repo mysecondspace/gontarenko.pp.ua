@@ -47,7 +47,7 @@ self.__precacheManifest = [
   },
   {
     "url": "data/cv.pdf",
-    "revision": "845177db7e370395a9d86dd8032732b4"
+    "revision": "3859fdabdd17eab9d3c18e43de5761fd"
   },
   {
     "url": "favicon-16x16.png",
