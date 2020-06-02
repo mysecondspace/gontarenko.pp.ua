@@ -783,9 +783,14 @@ article {
 article > div {
   width: 100%;
 }
+@media only screen and (max-width: 767px) {
+  article > div {
+    margin: 3vh 0;
+  }
+}
 @media only screen and (orientation: landscape) {
   article > div {
-    margin: 9vh 0;
+    margin: 6vh 0;
   }
 }
 article > div .heading {

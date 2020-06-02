@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about-me.html",
-    "revision": "8d10ce3eb384828e9c7d8599f4802edc"
+    "revision": "f6a51f6c1f9689c2d5ffdd456e4ccf0b"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -46,8 +46,8 @@ self.__precacheManifest = [
     "revision": "442e9f6c5a719398e36f3bb2f7a43b8e"
   },
   {
-    "url": "data/cv.pdf",
-    "revision": "3859fdabdd17eab9d3c18e43de5761fd"
+    "url": "data/CV Hontarenko.pdf",
+    "revision": "67fdfadb315af502aa6076dc0eead96e"
   },
   {
     "url": "favicon-16x16.png",
@@ -107,7 +107,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "4a65d5d837dba8d977399aa363c952c9"
+    "revision": "275af84face4653b4484c2d416598f60"
   },
   {
     "url": "mail.php",
@@ -127,15 +127,15 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "f539e8dd7e1dcbb4930cdd0468eac1da"
+    "revision": "1627e1e3b4e54c8f37ffe65d373b8c50"
   },
   {
     "url": "styles/main.css",
-    "revision": "96518f94632b44a7752f2536d44bacb7"
+    "revision": "95b99b6149662584cc07f48cef6f7e0c"
   },
   {
     "url": "styles/main.min.css",
-    "revision": "b6cd2ebc012bcaecbc6818946155bb9f"
+    "revision": "5a974d89106cfb73414c40dde79ec1b3"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

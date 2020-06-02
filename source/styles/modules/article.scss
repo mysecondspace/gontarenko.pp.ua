@@ -7,8 +7,12 @@ article {
   > div {
     width: 100%;
 
+    @include media(phone) {
+      margin: $padding 0;
+    }
+
     @include landscape {
-      margin: $padding * 3 0;
+      margin: $padding * 2 0;
     }
 
     // heading
