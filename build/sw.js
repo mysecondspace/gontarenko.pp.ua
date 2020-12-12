@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about-me.html",
-    "revision": "f6a51f6c1f9689c2d5ffdd456e4ccf0b"
+    "revision": "bb7b67df1a5f96c52fcf344f0c196b7a"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -44,10 +44,6 @@ self.__precacheManifest = [
   {
     "url": "browserconfig.xml",
     "revision": "442e9f6c5a719398e36f3bb2f7a43b8e"
-  },
-  {
-    "url": "data/CV Hontarenko.pdf",
-    "revision": "67fdfadb315af502aa6076dc0eead96e"
   },
   {
     "url": "favicon-16x16.png",
