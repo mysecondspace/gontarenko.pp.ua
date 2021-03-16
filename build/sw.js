@@ -123,7 +123,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "6566b364112e33a3d7e54972c9cd6dfb"
+    "revision": "847175c030c4dc710a2175343b4bd7f0"
   },
   {
     "url": "styles/main.css",

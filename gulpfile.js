@@ -34,25 +34,25 @@ var exclude = '!source',
       },
       source: {
         html: source + '/*.html',
-        metafiles: source + '/*.*',
         fonts: source + '/fonts/*.*',
         images: source + '/images/*.*',
         styles: source + '/styles/*.*',
         scripts: source + '/scripts/*.*',
+        metafiles: source + '/*.*',
         data: source + '/data/*.*',
         sw: '**/*.*'
       },
       watch: {
         html: source + '/**/*.html',
-        metafiles: source + '/*.*',
         fonts: source + '/fonts/*.*',
         images: source + '/images/*.*',
         styles: source + '/styles/**/*.*',
         scripts: source + '/scripts/**/*.*',
+        metafiles: source + '/*.*',
         data: source + '/data/*.*',
         sw: source + '/**/*.*'
       },
-      clean: 'build'
+      clean: build
     };
 
 gulp.task('html', () => {
@@ -133,7 +133,7 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('metafiles', () => {
-  gulp.src([path.exclude.metafiles, path.source.metafiles])
+  gulp.src([path.source.metafiles, path.exclude.metafiles])
     .pipe(gulp.dest(path.build.metafiles));
 });
 
