@@ -6,6 +6,9 @@ var wrapper = $('.wrapper'),
     body = $('html, body'),
     form = $('.form')
 
+// set current year
+document.getElementById('year').innerHTML = new Date().getFullYear();
+
 // page preloader
 $(window).on('load', function () {
   $('.preloader__background').delay(100).fadeOut('slow');

@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about-me.html",
-    "revision": "0deb04b50b774ccbbb156722e3061fb2"
+    "revision": "8c1678d91dadd0db70e16e12cceb4c56"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -103,7 +103,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9cd3eabf3bd9fea3baeb91fec4e6ec31"
+    "revision": "d24dd482cee4a52f50b9ba638b249c3a"
   },
   {
     "url": "mail.php",
