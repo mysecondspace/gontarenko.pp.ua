@@ -55,10 +55,6 @@ var exclude = '!source',
       clean: 'build'
     };
 
-gulp.task('default', ['build', 'server', 'watch']);
-
-gulp.task('build', ['html', 'metafiles', 'fonts', 'images', 'compass', 'libs', 'scripts', 'data', 'sw']);
-
 gulp.task('html', () => {
   gulp.src(path.source.html)
     .pipe(plugins.plumber())
@@ -70,11 +66,6 @@ gulp.task('html', () => {
     .pipe(plugins.browserSync.reload({
       stream: true
     }));
-});
-
-gulp.task('metafiles', () => {
-  gulp.src([path.exclude.metafiles, path.source.metafiles])
-    .pipe(gulp.dest(path.build.metafiles));
 });
 
 gulp.task('fonts', () => {
@@ -141,6 +132,11 @@ gulp.task('scripts', () => {
     }));
 });
 
+gulp.task('metafiles', () => {
+  gulp.src([path.exclude.metafiles, path.source.metafiles])
+    .pipe(gulp.dest(path.build.metafiles));
+});
+
 gulp.task('data', () => {
   gulp.src(path.source.data)
     .pipe(gulp.dest(path.build.data));
@@ -163,35 +159,16 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('watch', () => {
-  plugins.watch([path.watch.html], function(event, cb) {
-    gulp.start('html');
-  });
-
-  plugins.watch([path.watch.metafiles], function(event, cb) {
-    gulp.start('metafiles');
-  });
-
-  plugins.watch([path.watch.fonts], function(event, cb) {
-    gulp.start('fonts');
-  });
-
-  plugins.watch([path.watch.images], function(event, cb) {
-    gulp.start('images');
-  });
-
-  plugins.watch([path.watch.styles], function(event, cb) {
-    gulp.start('compass');
-  });
-
-  plugins.watch([path.watch.scripts], function(event, cb) {
-    gulp.start('scripts');
-  });
-
-  plugins.watch([path.watch.data], function(event, cb) {
-    gulp.start('data');
-  });
-
-  plugins.watch([path.watch.sw], function(event, cb) {
-    gulp.start('sw');
-  });
+  plugins.watch([path.watch.html], gulp.series('html'));
+  plugins.watch([path.watch.fonts], gulp.series('fonts'));
+  plugins.watch([path.watch.images], gulp.series('images'));
+  plugins.watch([path.watch.styles], gulp.series('compass'));
+  plugins.watch([path.watch.scripts], gulp.series('scripts'));
+  plugins.watch([path.watch.metafiles], gulp.series('metafiles'));
+  plugins.watch([path.watch.data], gulp.series('data'));
+  plugins.watch([path.watch.sw], gulp.series('sw'));
 });
+
+gulp.task('build', gulp.parallel('html', 'fonts', 'images', 'compass', 'libs', 'scripts', 'metafiles', 'data', 'sw'));
+
+gulp.task('default', gulp.parallel('build', 'server', 'watch'));

@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about-me.html",
-    "revision": "bb7b67df1a5f96c52fcf344f0c196b7a"
+    "revision": "0deb04b50b774ccbbb156722e3061fb2"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -79,15 +79,15 @@ self.__precacheManifest = [
   },
   {
     "url": "images/close.svg",
-    "revision": "ba30e4c150871c9aec0adb847809bcc7"
+    "revision": "ad4201fd617ad9eae86ef25156b27991"
   },
   {
     "url": "images/glitch-transition.gif",
-    "revision": "c163a636a86c882ce7de243e66e8efb5"
+    "revision": "8766d9d13c4b259612860adcdd243297"
   },
   {
     "url": "images/me.jpg",
-    "revision": "9fa7adaa58804ee3c4ec83679cb431cf"
+    "revision": "845a1c5d6888d9751660ea4d8bed1f9c"
   },
   {
     "url": "images/noise.png",
@@ -103,7 +103,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "275af84face4653b4484c2d416598f60"
+    "revision": "9cd3eabf3bd9fea3baeb91fec4e6ec31"
   },
   {
     "url": "mail.php",
@@ -123,7 +123,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "1627e1e3b4e54c8f37ffe65d373b8c50"
+    "revision": "6566b364112e33a3d7e54972c9cd6dfb"
   },
   {
     "url": "styles/main.css",
@@ -131,7 +131,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.min.css",
-    "revision": "5a974d89106cfb73414c40dde79ec1b3"
+    "revision": "25fc61c2a859054e7bee7d643c56d551"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
