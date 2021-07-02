@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about-me.html",
-    "revision": "8c1678d91dadd0db70e16e12cceb4c56"
+    "revision": "3f4e72757fee0ab08cbe17674caeb23d"
   },
   {
     "url": "android-chrome-192x192.png",
