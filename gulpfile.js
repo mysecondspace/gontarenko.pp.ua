@@ -9,7 +9,7 @@ var exclude = '!source',
     source = 'source',
     build = 'build',
     config = {
-      port: 8888,
+      port: 2000,
       tunnel: false,
       notify: false,
       host: 'localhost',

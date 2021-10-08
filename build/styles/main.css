@@ -883,7 +883,7 @@ article > div .info {
 @media only screen and (orientation: landscape) {
   article > div .info {
     margin-left: auto;
-    width: 48%;
+    width: 55%;
   }
 }
 article > div .info h1 {
