@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "about-me.html",
-    "revision": "87ef913ffba68dd6071e31b69960a36f"
+    "revision": "e822a9688b2ef5f47473383fcff64262"
   },
   {
     "url": "android-chrome-192x192.png",
@@ -44,6 +44,10 @@ self.__precacheManifest = [
   {
     "url": "browserconfig.xml",
     "revision": "442e9f6c5a719398e36f3bb2f7a43b8e"
+  },
+  {
+    "url": "data/UI Engineer, Hontarenko Ihor.pdf",
+    "revision": "d77ffefda12636a018faa0c62ec577a7"
   },
   {
     "url": "favicon-16x16.png",
@@ -123,7 +127,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.min.js",
-    "revision": "847175c030c4dc710a2175343b4bd7f0"
+    "revision": "56cb8f7d5506e95da908fc77dc4f4f49"
   },
   {
     "url": "styles/main.css",
@@ -131,7 +135,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.min.css",
-    "revision": "0467942e41aac82094067a177d611a1c"
+    "revision": "5fd6e761b22ef3f1c170e8f9448553a5"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
