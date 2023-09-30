@@ -1,8 +1,6 @@
-# components
+# dependencies
 bower_components
-
-# modules
 node_modules
 
-# macOS files
+# misc
 .DS_Store
