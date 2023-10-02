@@ -11,10 +11,9 @@
     "node_modules",
     "bower_components"
   ],
-  "overrides": {},
   "dependencies": {
-    "jquery": "^3.2.1",
-    "wow": "wowjs#^1.1.2",
-    "vanilla-lazyload": "^10.19.0"
+    "jquery": "^3.7.1",
+    "vanilla-lazyload": "^17.8.4",
+    "wow": "^1.1.2"
   }
 }
