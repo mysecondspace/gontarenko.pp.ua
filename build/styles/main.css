@@ -1043,10 +1043,10 @@ footer > * {
 }
 footer > p {
   display: grid;
+  font-size: 0.57143em;
 }
 footer > p span {
   color: #fff;
-  font-size: 0.57143em;
   transform: rotate(180deg);
   writing-mode: vertical-lr;
   text-transform: uppercase;

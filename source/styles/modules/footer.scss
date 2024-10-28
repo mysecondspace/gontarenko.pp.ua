@@ -18,10 +18,10 @@ footer {
   // copyright
   > p {
     display: grid;
+    font-size: em(8);
 
     span {
       color: $white;
-      font-size: em(8);
       transform: rotate(180deg);
       writing-mode: vertical-lr;
       text-transform: uppercase;
